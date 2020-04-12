@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="684c662e-1d2d-48f3-aaf4-e9a3cc863ade" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1aAkMjT6upLlITjHM52n9uNUYjQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demos/Scalytics" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rodrigo\Desktop\Scalytics Chile\demos\Scalytics" />
+      <recent name="C:\Users\Rodrigo\Desktop\Scalytics Chile\assets\images\prv\people" />
+      <recent name="C:\Users\Rodrigo\Desktop\Scalytics Chile\assets\images\prv\other" />
+      <recent name="C:\Users\Rodrigo\Desktop\Scalytics Chile\assets\images\icons\purple\png" />
+      <recent name="C:\Users\Rodrigo\Desktop\Scalytics Chile\assets\images\backgrounds\slider" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rodrigo\Desktop\Scalytics Chile\assets\images\prv\people" />
+      <recent name="C:\Users\Rodrigo\Desktop\Scalytics Chile\assets\images\prv\other" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="684c662e-1d2d-48f3-aaf4-e9a3cc863ade" name="Default Changelist" comment="" />
+      <created>1586185739472</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586185739472</updated>
+      <workItem from="1586185741771" duration="23876000" />
+      <workItem from="1586381818862" duration="12612000" />
+      <workItem from="1586538036448" duration="11336000" />
+      <workItem from="1586638462610" duration="23935000" />
+      <workItem from="1586712633680" duration="10974000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1586382133919">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586382133919" />
+    <state x="373" y="233" key="SettingsEditor" timestamp="1586196795089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="373" y="233" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586196795089" />
+  </component>
+</project>
