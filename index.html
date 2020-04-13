@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="assets/fonts/linea/software/linea-icons.css" type="text/css">
 
 <!-- Global style (main) -->
-<link id="stylesheet" type="text/css" href="assets/css/boomerang.min.css" rel="stylesheet" media="screen">
+<link id="stylesheet" type="text/css" href="assets/css/boomerang-startup-agency.min.css" rel="stylesheet" media="screen">
 
 <!-- Custom style - Remove if not necessary -->
 <link type="text/css" href="assets/css/custom-style.css" rel="stylesheet">
@@ -46,760 +46,1153 @@
 <link href="assets/images/favicon.png" rel="icon" type="image/png">
 
 
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+<link href="assets/vendor/fontawesome/css/all.css" rel="stylesheet">
 </head>
+
+<style>
+
+    .block--style-5 .block-caption--over {
+        height: 89px; !important;
+    }
+
+    .block--style-5:hover .block-caption--over {
+        height: 139px; !important;
+    }
+
+/* ============================================================================================================================
+== RECTANGLE-BORDER STYLE WITH CURVE
+** ============================================================================================================================ */
+
+.rectangle-speech-border {
+    position:relative;
+    padding:10px;
+    margin:1em 0 2em;
+    border:2px solid palevioletred;
+    text-align:center;
+    color:#333;
+    background:#fff;
+    /* css3 */
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+}
+
+/* creates larger curve  curva grande desde extremo opuesto*/
+.rectangle-speech-border:before {
+    content:"";
+    position:absolute;
+    z-index:10;
+    bottom:-20px;
+    left:60px;
+    width:25px;
+    height:20px;
+    border-style:solid;
+    border-width:0 2px 2px 0;
+    border-color:palevioletred;
+    background:transparent;
+    /* css3 */
+    -webkit-border-bottom-right-radius:40px 25px;
+    -moz-border-radius-bottomright:40px 25px;
+    border-bottom-right-radius:40px 25px;
+    /* reduce the damage in FF3.0 */
+    display:block;
+}
+
+/* creates smaller curve */
+.rectangle-speech-border:after {
+    content:"";
+    position:absolute;
+    z-index:10;
+    bottom:-20px;
+    left:60px;
+    width:10px;
+    height:20px;
+    border-style:solid;
+    border-width:0 2px 2px 0;
+    border-color:palevioletred;
+    background:transparent;
+    /* css3 */
+    -webkit-border-bottom-right-radius:20px 25px;
+    -moz-border-radius-bottomright:20px 25px;
+    border-bottom-right-radius:20px 25px;
+    /* reduce the damage in FF3.0 */
+    display:block;
+}
+
+/* creates a small circle to produce a rounded point where the two curves meet */
+.rectangle-speech-border > :first-child:before {
+    content:"";
+    position:absolute;
+    bottom:-20px;
+    left:58px;
+    width:2px;
+    height:2px;
+    background:palevioletred;
+    /* css3 */
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+}
+
+/* creates a white rectangle to cover part of the oval border*/
+.rectangle-speech-border > :first-child:after {
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    left:70px;
+    width:15px;
+    height:15px;
+    background:#fff;
+}
+
+.rectangle-speech-border p{
+    font-family: 'Roboto',sans-serif;
+    color: #676767;
+}
+
+.response-speech-border {
+    position:relative;
+    padding:10px;
+    margin:1em 0 1em;
+    border:2px solid seagreen;
+    text-align:center;
+    color:#333;
+    background:#fff;
+    /* css3 */
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+}
+
+/* creates larger curve  curva grande desde extremo opuesto*/
+.response-speech-border:before {
+    content:"";
+    position:absolute;
+    z-index:10;
+    bottom:-20px;
+    right:60px;
+    width:25px;
+    height:20px;
+    border-style:solid;
+    border-width:0 0 2px 2px;
+    border-color:seagreen;
+    background:transparent;
+    /* css3 */
+    -webkit-border-bottom-left-radius:40px 25px;
+    -moz-border-radius-bottomleft:40px 25px;
+    border-bottom-left-radius:40px 25px;
+    /* reduce the damage in FF3.0 */
+    display:block;
+}
+
+/* creates smaller curve */
+.response-speech-border:after {
+    content:"";
+    position:absolute;
+    z-index:10;
+    bottom:-20px;
+    right:60px;
+    width:10px;
+    height:20px;
+    border-style:solid;
+    border-width:0 0 2px 2px;
+    border-color:seagreen;
+    background:transparent;
+    /* css3 */
+    -webkit-border-bottom-left-radius:20px 25px;
+    -moz-border-radius-bottomleft:20px 25px;
+    border-bottom-left-radius:20px 25px;
+    /* reduce the damage in FF3.0 */
+    display:block;
+}
+
+/* creates a small circle to produce a rounded point where the two curves meet */
+.response-speech-border > :first-child:before {
+    content:"";
+    position:absolute;
+    bottom:-20px;
+    right:59px;
+    width:2px;
+    height:2px;
+    background:seagreen;
+    /* css3 */
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+}
+
+/* creates a white rectangle to cover part of the oval border*/
+.response-speech-border > :first-child:after {
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    right:70px;
+    width:15px;
+    height:15px;
+    background:#fff;
+}
+
+.response-speech-border p{
+    font-family: 'Roboto',sans-serif;
+    color: #676767;
+}
+
+[class*="social-media--style-1"] > li > a:hover {
+    background: black;
+    color: #FFF;
+}
+
+</style>
 <body>
 
 
 <!-- MAIN WRAPPER -->
-<main class="body-wrap">
-    <!-- Header -->
-    <div class="header">
-    <!-- Top Bar -->
-    
-    <!-- Global Search -->
-    <section id="sctGlobalSearch" class="global-search global-search-overlay">
-    <div class="container">
-        <div class="global-search-backdrop mask-dark--style-2"></div>
+<div class="body-wrap">
+    <div id="st-container" class="st-container">
 
-        <!-- Search form -->
-        <form class="form-horizontal form-global-search z-depth-2-top" role="form">
-            <div class="px-4">
-                <div class="row">
-                    <div class="col-12">
-                        <input type="text" class="search-input" placeholder="Type and hit enter ...">
-                    </div>
-                </div>
+        <nav class="st-menu st-effect-1" id="menu-1">
+    <div class="st-profile">
+        <div class="st-profile-user-wrapper">
+            <div class="profile-user-image">
+                <img src="assets/images/prv/people/person-1.jpg" class="img-circle" />
             </div>
-            <a href="#" class="close-search" data-toggle="global-search" title="Close search bar"></a>
-        </form>
+            <div class="profile-user-info">
+                <span class="profile-user-name">Bertram Ozzie</span>
+                <span class="profile-user-email">username@example.com</span>
+            </div>
+        </div>
     </div>
-</section>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar--bold  navbar-transparent navbar-inverse bg-dark  ">
-        <div class="container navbar-container">
-            <!-- Brand/Logo -->
-                        <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo/logo-1-a.png" class="d-none d-lg-inline-block" alt="Boomerang">
-                <img src="assets/images/logo/logo-1-a.png" class="d-lg-none" alt="Boomerang">            </a>
-            
-            <div class="d-inline-block">
-                <!-- Navbar toggler  -->
-                <button class="navbar-toggler hamburger hamburger-js hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="st-menu-list mt-2">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-bookmarks-outline"></i> Theme documentation
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-cart-outline"></i> Purchase Tribus
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Account</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-person-outline"></i> User profile
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-location-outline"></i> My addresses
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-card"></i> My cards
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-unlocked-outline"></i> Password update
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Support center</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-information-outline"></i> About Tribus
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-email-outline"></i> Contact &amp; support
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-camera"></i> Getting started
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+        <div class="st-pusher">
+            <div class="st-content">
+                <div class="st-content-inner">
+                    <!-- Header -->
+
+                    <div class="header">
+                        <!-- Top Bar -->
+
+                        <!-- Global Search -->
+                        <section id="sctGlobalSearch" class="global-search global-search-overlay">
+                            <div class="container">
+                                <div class="global-search-backdrop mask-dark--style-2"></div>
+
+                                <!-- Search form -->
+                                <form class="form-horizontal form-global-search z-depth-2-top" role="form">
+                                    <div class="px-4">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input type="text" class="search-input" placeholder="Type and hit enter ...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="close-search" data-toggle="global-search" title="Close search bar"></a>
+                                </form>
+                            </div>
+                        </section>
+
+                        <!-- Navbar -->
+                        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar--shadow">
+                            <div class="container navbar-container">
+                                <!-- Brand/Logo -->
+                                <a class="navbar-brand" href="index.html">
+                                    <img title="scalytics-logo" alt="scalytics-logo" src="https://scalytics.ai/wp-content/uploads/elementor/thumbs/scalytics-logo-ofcd8j56av6j9xho3oof7il5j59t5z9puql15da3pw.png">
+                                    <!--<img src="assets/images/logo/logo-1-b.png" class="" alt="Boomerang">-->
+                                </a>
+
+                                <div class="d-inline-block">
+                                    <!-- Navbar toggler  -->
+                                    <button class="navbar-toggler hamburger hamburger-js hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
-                </button>
-            </div>
+                                    </button>
+                                </div>
 
-            <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbar_main">
-    <!-- Navbar search - For small resolutions -->
-    <div class="navbar-search-widget b-xs-bottom py-3 d-lg-none d-none">
-        <form class="" role="form">
-            <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
+                                <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbar_main">
+                                    <!-- Navbar search - For small resolutions -->
+                                    <div class="navbar-search-widget b-xs-bottom py-3 d-lg-none d-none">
+                                        <form class="" role="form">
+                                            <div class="input-group input-group-lg">
+                                                <input type="text" class="form-control" placeholder="Search for...">
+                                                <span class="input-group-btn">
                 <button class="btn btn-base-3" type="button">Go!</button>
                 </span>
-            </div>
-        </form>
-    </div>
+                                            </div>
+                                        </form>
+                                    </div>
 
-    <!-- Navbar links -->
-    <ul class="navbar-nav">
-        <li class="nav-item dropdown megamenu">
-            <a class="nav-link" href="index.html">
-                Overview
-            </a>
-        </li>
-        <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Pages
-            </a>
+                                    <!-- Navbar links -->
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item dropdown megamenu">
+                                            <a class="nav-link" href="index.html" data-animation-in="fadeInUpBig" data-animation-delay="1000" data-scroll-to="#features">
+                                                Principal Features
+                                            </a>
+                                        </li>
+                                        <li class="nav-item dropdown megamenu">
+                                            <a class="nav-link" href="index.html" data-animation-in="fadeInUpBig" data-animation-delay="1000" data-scroll-to="#description">
+                                                Vision
+                                            </a>
+                                        </li>
+                                        <li class="nav-item dropdown megamenu">
+                                            <a class="nav-link" href="index.html" data-animation-in="fadeInUpBig" data-animation-delay="1000" data-scroll-to="#why_use_product">
+                                                Advantages
+                                            </a>
+                                        </li>
+                                        <li class="nav-item dropdown megamenu">
+                                            <a class="nav-link" href="index.html" data-animation-in="fadeInUpBig" data-animation-delay="1000" data-scroll-to="#case_of_usage">
+                                                Successful Stories
+                                            </a>
+                                        </li>
+                                        <li class="nav-item dropdown megamenu">
+                                            <a class="nav-link" href="index.html" data-animation-in="fadeInUpBig" data-animation-delay="1000" data-scroll-to="#team">
+                                                Our Team
+                                            </a>
+                                        </li>
+                                    </ul>
 
-            <div class="dropdown-menu dropdown-menu-xl py-0 px-0 overflow--hidden" aria-labelledby="navbar_1_dropdown_1">
-                <div class="list-group rounded">
-                    <a href="pages-home.html" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <div class="list-group-content">
-                            <div class="list-group-heading heading heading-6 mb-1">Home pages</div>
-                            <p class="text-sm mb-0">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor</p>
-                        </div>
-                    </a>
-                    <a href="pages-inner.html" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <div class="list-group-content">
-                            <div class="list-group-heading heading heading-6 mb-1">Inner pages</div>
-                            <p class="text-sm mb-0">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor</p>
-                        </div>
-                    </a>
-                    <a href="pages-profile.html" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <div class="list-group-content">
-                            <div class="list-group-heading heading heading-6 mb-1">Profile pages</div>
-                            <p class="text-sm mb-0">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor</p>
-                        </div>
-                    </a>
-                    <a href="pages-blog.html" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <div class="list-group-content">
-                            <div class="list-group-heading heading heading-6 mb-1">Blog pages</div>
-                            <p class="text-sm mb-0">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor</p>
-                        </div>
-                    </a>
-                    <a href="pages-shop.html" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <div class="list-group-content">
-                            <div class="list-group-heading heading heading-6 mb-1">Shop pages</div>
-                            <p class="text-sm mb-0">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor</p>
-                        </div>
-                    </a>
-                    <a href="pages-real-estate.html" class="list-group-item list-group-item-action d-flex align-items-center">
-                        <div class="list-group-content">
-                            <div class="list-group-heading heading heading-6 mb-1">Real estate pages</div>
-                            <p class="text-sm mb-0">Lorem ipsum dolor sit amet consectetur adipiscing eiusmod tempor</p>
-                        </div>
-                    </a> 
-                </div>
-            </div>
-        </li>
-        <li class="nav-item dropdown megamenu">
-            <a class="nav-link" href="demos.html">
-                Demos
-            </a>
-        </li>
-        <li class="nav-item dropdown megamenu">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Components
-            </a>
+                                </div>
 
-            <div class="dropdown-menu">
-                <div class="mega-dropdown-menu row row-no-padding">
-                    <div class="mega-dropdown-col mega-dropdown-col-cover mega-dropdown-col-cover--left col-lg-5 d-none d-lg-block d-xl-block" style="background-image: url(assets/images/prv/other/img-14-1000x900.jpg); background-position: center center;">
-                        <span class="mask mask-base-1--style-1 alpha-8"></span>
-                        <div class="mega-dropdown-col-inner d-flex align-items-center no-padding">
-                            <div class="col">
-                                <div class="row align-items-center">
-                                    <div class="col-12">
-                                        <div class="px-4">
-                                            <h2 class="heading heading-2 strong-600 c-white">
-                                                Documentation and Shortcodes
-                                            </h2>
-                                            <p class="strong-300 c-white mt-4">
-                                                Get started fast and easy with Boomerang using the documentation and shortcode examples. No matter
-                                                you are a developer or new to web design, you will
-                                                find our theme very easy to customize with
-                                                an intuitive HTML markup.
+
+                                <div class="pl-4 d-none d-lg-inline-block">
+                                    <a href="index.html" class="btn btn-styled btn-base-4 btn-circle" target="_blank">
+                                        Contact Us
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <!--Que es!!!-->
+                    <section class="swiper-js-container background-image-holder">
+                        <div class="swiper-container" data-swiper-autoplay="true" data-swiper-effect="slide" data-swiper-items="1" data-swiper-space-between="0" >
+                            <div class="swiper-wrapper">
+                                <!-- Slide -->
+                                <div class="swiper-slide" data-swiper-autoplay="8000">
+                                    <div class="holder-item holder-item-light has-bg-cover bg-size-cover" style="padding-bottom: 280px; background-image: url(assets/images/backgrounds/slider/wow.jpg); background-position: bottom center;">
+                                        <!--<span class="mask mask-base-1--style-1" style="background: rgba(109,14,177,0.4) !important;"></span>-->
+                                        <span class="mask mask-base-1--style-1" style="background: rgba(0,0,0,0.65) !important;"></span>
+                                        <div class="container container-lg slice--offset-top d-flex align-items-center">
+                                            <div class="col px-0">
+                                                <div class="row">
+                                                    <div style="padding-top: 100px" class="col-lg-6">
+                                                        <h2 class="heading heading-xl strong-600 text-normal line-height-1_2 animated" data-animation-in="fadeInDownBig" data-animation-delay="200">
+                                                            Code Once. Deploy on any Cloud
+                                                        </h2>
+                                                        <p class="lead animated mt-4" data-animation-in="fadeInUpBig" data-animation-delay="200">
+                                                            Scalytics is the World's First Intelligent Cloud Scheduler.
+                                                        </p>
+
+                                                        <a href="https://goo.gl/9BbH7R" class="btn btn-styled btn-lg btn-white btn-circle btn-outline mt-5 animated" data-animation-in="fadeInUpBig" data-animation-delay="1000" data-scroll-to="#features">
+                                                            See what we do
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="shape-container" data-shape-fill="sct-color-1" data-shape-position="bottom" style="height: 280px">
+                                <svg class="shape-item" fill="" viewBox="0 0 1000 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 0 246.131 C 0 246.131 31.631 250.035 47.487 249.429 C 65.149 248.755 82.784 245.945 99.944 241.732 C 184.214 221.045 222.601 171.885 309.221 166.413 C 369.892 162.581 514.918 201.709 573.164 201.709 C 714.375 201.709 772.023 48.574 910.547 21.276 C 939.811 15.509 1000 24.025 1000 24.025 L 1000 300.559 L -0.002 300.559 L 0 246.131 Z" />
+
+                                </svg>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--Features!!!-->
+                    <section class="slice sct-color-1" id="features">
+                        <div class="container container-lg"  style="padding-top: 50px !important;">
+                            <div class="row cols-xs-space cols-sm-space cols-md-space">
+                                <div class="col-12 col-lg-4 animate-on-scroll fadeInDown">
+                                    <div class="icon-block icon-block--style-1-v5 px-4">
+                                        <div class="block-icon">
+                                            <img src="assets/images/icons/purple/png/positive-dynamic.png">
+                                        </div>
+                                        <div class="block-content">
+                                            <h3 class="heading heading-4 strong-600 text-capitalize">Predictive Pricing</h3>
+                                            <p>
+                                                Quickly see which combination of cloud platforms and on-premise solutions provides the best price and performance for your big data analysis.
                                             </p>
-                                            <div class="btn-container mt-5">
-                                                <a href="documentation/getting-started/introduction.html" target="_blank" class="btn btn-styled btn-white btn-outline btn-circle">Read the Docs</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-4 animate-on-scroll fadeInDown" data-wow-delay="0.3s">
+                                    <div class="icon-block icon-block--style-1-v5 px-4">
+                                        <div class="block-icon">
+                                            <!--<img src="assets/images/icons/purple/png/light-on.png">-->
+                                            <i class="fab fa-connectdevelop" style="font-size: 80px; margin-bottom: 5px; color: blueviolet"></i>
+                                        </div>
+                                        <div class="block-content">
+                                            <h3 class="heading heading-4 strong-600 text-capitalize">Compliance Control</h3>
+                                            <p>
+                                                Deploy your workloads to different cloud platforms based on your compliance needs.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-4 animate-on-scroll fadeInDown" data-wow-delay="0.6s">
+                                    <div class="icon-block icon-block--style-1-v5 px-4">
+                                        <div class="block-icon">
+                                            <img src="assets/images/icons/purple/png/money-bag.png">
+                                        </div>
+                                        <div class="block-content">
+                                            <h3 class="heading heading-4 strong-600 text-capitalize">Identify Cloud Spend Savings</h3>
+                                            <p>
+                                                See all of your workloads across your organization, and how much you can save by deploying to different cloud providers.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--Imagen bonita con explicacion, no la necesitamos!!!-->
+                    <section class="slice-lg sct-color-1" id="description">
+                        <div class="container container-lg">
+                            <div class="row cols-xs-space cols-sm-space cols-md-space align-items-center">
+                                <div class="col-lg-6 order-lg-2 animate-on-scroll fadeIn">
+                                    <div class="block block-image-holder">
+                                        <div class="block-image">
+                                            <img src="assets/images/prv/other/55555.jpg" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 order-lg-1 animate-on-scroll fadeIn" data-wow-delay="0.3s">
+                                    <div class="feature feature--boxed-border floating-content float--width-200 sct-color-1 border-0 no-bg px-0" style="z-index: 0 !important;">
+                                        <h2 class="heading heading-5 c-gray-light text-uppercase strong-600">
+                                            Scalytics: AI based platform Empowers You to Make Better Decisions
+                                        </h2>
+                                        <h2 class="heading heading-1 strong-600 mt-4">
+                                            Meeting compliance, performance, and cost requirements for cloud applications.
+                                        </h2>
+
+                                        <a href="#" class="btn btn-styled btn-base-1 btn-circle mt-5">Learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--Otra opcion para features!!!-->
+                    <section class="slice-xl pt-5 sct-color-1" id="why_use_product">
+                        <div class="container container-lg" style="padding-top: 50px !important;">
+                            <div class="section-title section-title--style-1 text-center mb-2 animate-on-scroll fadeInDown">
+                                <h3 class="section-title-inner text-normal strong-600">
+                                    <span>Scalytics is made to encourage you</span>
+                                </h3>
+                                <span class="section-title-delimiter clearfix d-none"></span>
+                            </div>
+
+                            <span class="clearfix"></span>
+
+                            <div class="fluid-paragraph fluid-paragraph-sm c-gray-light strong-300 text-center animate-on-scroll fadeInDown" data-wow-delay="0.3s">
+                                Using this Intelligent Cloud Scheduler forget about deployment problems. Scalytics do it improving performance or reducing monetary costs.
+                            </div>
+
+                            <span class="space-xs-xl"></span>
+
+                            <div class="row-wrapper">
+                                <div class="row cols-xs-space cols-sm-space cols-md-space">
+                                    <div class="col-lg-6 col-sm-12 col-12">
+                                        <div class="feature feature--boxed-border feature--bg-1 z-depth-4 animate-on-scroll fadeInLeft">
+                                            <div class="icon-block icon-block--style-1-v2">
+                                                <div class="block-icon text-xs-left">
+                                                    <!--<i class="icon-cloud-download"></i>-->
+                                                    <i class="fab fa-cloudversify"></i>
+                                                </div>
+                                                <div class="block-content">
+                                                    <h3 class="heading heading-4 strong-600">Multi-Cloud</h3>
+
+                                                    <blockquote class="rectangle-speech-border">
+                                                        <p>
+                                                            In Cloud providers users are responsible for coding and scheduling their Multi-Cloud jobs, this is difficult even for expert users.
+                                                        </p>
+                                                    </blockquote>
+
+                                                    <blockquote class="response-speech-border">
+                                                        <p>
+                                                            Scalytics automatically deploys each sub-part of a Job to the most relevant cloud provider in a seamless manner to reduce costs and improve performance.
+                                                        </p>
+                                                    </blockquote>
+                                                    <!--<a href="#" style="margin-top: 2em !important;" class="link link-sm mt-3">Learn more</a>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12 col-12">
+                                        <div class="feature feature--boxed-border feature--bg-1 z-depth-4 animate-on-scroll fadeInRight">
+                                            <div class="icon-block icon-block--style-1-v2">
+                                                <div class="block-icon text-xs-left">
+                                                    <!--<i class="icon-mouse"></i>-->
+                                                    <i class="fas fa-piggy-bank"></i>
+                                                </div>
+                                                <div class="block-content">
+                                                    <h3 class="heading heading-4 strong-600">Cost Management</h3>
+
+                                                    <blockquote class="rectangle-speech-border">
+                                                        <p>
+                                                            Nowadays users must analise cloud usage reports and learn how to reduce costs by themselves.
+                                                        </p>
+                                                    </blockquote>
+
+                                                    <blockquote class="response-speech-border">
+                                                        <p>
+                                                            With Scalytics costs are reduced from day zero. Before running a Job predicts the execution cost on the different providers.
+                                                        </p>
+                                                    </blockquote>
+                                                    <!--<a href="#" style="margin-top: 2em !important;" class="link link-sm mt-3">Learn more</a>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row cols-xs-space cols-sm-space cols-md-space">
+                                    <div class="col-lg-6 col-sm-12 col-12">
+                                        <div class="feature feature--boxed-border feature--bg-1 z-depth-4 animate-on-scroll fadeInLeft">
+                                            <div class="icon-block icon-block--style-1-v2">
+                                                <div class="block-icon text-xs-left">
+                                                    <!--<i class="icon-like"></i>-->
+                                                    <i class="fas fa-magic"></i>
+                                                </div>
+                                                <div class="block-content">
+                                                    <h3 class="heading heading-4 strong-600">Cloud Management</h3>
+
+                                                    <blockquote class="rectangle-speech-border">
+                                                        <p>
+                                                            Cloud providers does not help in creating their computing clusters. Simply monitors your Cloud usage.
+                                                        </p>
+                                                    </blockquote>
+
+                                                    <blockquote class="response-speech-border">
+                                                        <p>
+                                                            Cloud user gives his credentials to Scalytics and forget about the creation and deletion of their computing clusters. Now just enjoy an automatic deployment based on your jobs and datasets.
+                                                        </p>
+                                                    </blockquote>
+                                                    <!--<a href="#" style="margin-top: 2em !important;" class="link link-sm mt-3">Learn more</a>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-12 col-12">
+                                        <div class="feature feature--boxed-border feature--bg-1 z-depth-4 animate-on-scroll fadeInRight">
+                                            <div class="icon-block icon-block--style-1-v2">
+                                                <div class="block-icon text-xs-left">
+                                                    <!--<i class="icon-screen-tablet"></i>-->
+                                                    <!--<i class="fas fa-file-signature"></i>-->
+                                                    <i class="fas fa-sliders-h"></i>
+                                                </div>
+                                                <div class="block-content">
+                                                    <h3 class="heading heading-4 strong-600">Cloud Governance</h3>
+
+                                                    <blockquote class="rectangle-speech-border">
+                                                        <p>
+                                                            Cloud Users currently can set rules regarding the budget on how to use the cloud. Wisely spending requires way more knowledge that users might have.
+                                                        </p>
+                                                    </blockquote>
+
+                                                    <blockquote class="response-speech-border">
+                                                        <p>
+                                                            Scalytics provides to the Users the below set of rules:
+                                                        </p>
+
+                                                        <p>(i) Execute workflow on cheapest provider.</p>
+                                                        <p>(ii) How long can be delayed a Job execution to match cheaper times.</p>
+                                                        <p>(iii) Helping users on deploy their clusters based on the workload and data to be processed.</p>
+
+                                                    </blockquote>
+
+                                                    <!--<a href="#" style="margin-top: 1em !important;" class="link link-sm mt-3">Learn more</a>-->
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
-                    <div class="col-md-4 col-lg-2 ml-lg-auto">
-                        <ul class="megadropdown-links">
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/alerts.html">
-                                    Alerts
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/badges.html">
-                                    Badges
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/buttons.html">
-                                    Buttons
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/cards.html">
-                                    Cards
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/collapse.html">
-                                    Collapse
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/countdown.html">
-                                    Countdown
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/dropdown.html">
-                                    Dropdowns
-                                </a>
-                            </li>
+                    <!--Use case!!!, sliders!!!-->
+                    <section class="slice-lg sct-color-1" id="case_of_usage">
+                        <div class="container-fluid">
+                            <div class="swiper-container-coverflow" data-swiper-initial-slide="2" data-swiper-items="5" data-swiper-space-between="0" data-swiper-sm-items="2" data-swiper-sm-space-between="0" data-swiper-xs-items="1" data-swiper-xs-space-between="0">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide animate-on-scroll fadeIn" data-wow-delay="0.4s">
+                                        <div class="block block--style-5 mb-0">
+                                            <div class="block-image">
+                                                <a href="assets/images/prv/other/msg1.png" data-fancybox="apps">
+                                                    <img src="assets/images/prv/other/msg1.png">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/forms.html">
-                                    Forms
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/instagram.html">
-                                    Instagram
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/lightbox.html">
-                                    Lightbox
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/maps.html">
-                                    Maps
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/masonry.html">
-                                    Masonry
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                                    <div class="swiper-slide animate-on-scroll fadeIn" data-wow-delay="0.2s">
+                                        <div class="block block--style-5 mb-0">
+                                            <div class="block-image">
+                                                <a href="assets/images/prv/other/msg2.png" data-fancybox="apps">
+                                                    <img src="assets/images/prv/other/msg2.png">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="col-md-4 col-lg-2">
-                        <ul class="megadropdown-links">
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/pagination.html">
-                                    Pagination
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/progress.html">
-                                    Progress bars
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/recaptcha.html">
-                                    Recaptcha
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/content/titles.html">
-                                    Section titles
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/forms.html#ex_component_sliders">
-                                    Sliders
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/tabs.html">
-                                    Tabs
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/components/typed-animations.html">
-                                    Typed animations
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/headers.html">
-                                    Headers
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="html/default/sliders/boomerang-slider/index.html">
-                                    Boomerang slider
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="html/default/sliders/revolution-slider/index.html">
-                                    Revolution slider
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/footers.html">
-                                    Footers
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/hero.html">
-                                    Hero blocks
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                                    <div class="swiper-slide animate-on-scroll fadeIn">
+                                        <div class="block block--style-5 mb-0">
+                                            <div class="block-image">
+                                                <a href="assets/images/prv/other/msg3.png" data-fancybox="apps">
+                                                    <img src="assets/images/prv/other/msg3.png">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="col-md-4 col-lg-2">
-                        <ul class="megadropdown-links">
+                                    <div class="swiper-slide animate-on-scroll fadeIn" data-wow-delay="0.2s">
+                                        <div class="block block--style-5 mb-0">
+                                            <div class="block-image">
+                                                <a href="assets/images/prv/other/msg4.png" data-fancybox="apps">
+                                                    <img src="assets/images/prv/other/msg4.png">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/icon.html">
-                                    Icon blocks
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/jobs.html">
-                                    Job blocks
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/pricing.html">
-                                    Pricing blocks
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/product.html">
-                                    Product blocks
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/real-estate.html">
-                                    Real-Estate blocks
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/team.html">
-                                    Team blocks
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/testimonials.html">
-                                    Testimonial blocks
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="documentation/blocks/comments.html">
-                                    Comment blocks
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-
-    <ul class="navbar-nav ml-lg-auto">
-        <li class="nav-item">
-            <a href="documentation/getting-started/introduction.html" class="nav-link">
-               Docs
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-<div class="pl-4 d-none d-lg-inline-block">
-    <a href="https://goo.gl/9BbH7R" class="btn btn-styled btn-sm btn-white btn-outline text-uppercase btn-circle" target="_blank">
-        Purchase now
-            </a>
-</div>
-        </div>
-    </nav>
-</div>
-
-    <section class="background-image-holder">
-        <div class="holder-item has-bg-cover bg-size-cover" style="background-image: url(assets/images/backgrounds/slider/img-41.jpg); background-position: left center;">
-            <span class="mask bg-base-1 alpha-7"></span>
-            <div class="container slice-lg slice--offset-top">
-                <div class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
-                    <div class="col-lg-7">
-                        <div class="text-center mt-5">
-                            <img src="assets/images/logo/icon.png" style="width: 200px;" class="img-fluid">
-                            <h2 class="heading display-3 font-weight-400 text-white mt-4 mb-0">
-                                <span class="font-weight-700">Boomerang</span>
-                            </h2>
-							<h2 class="heading heading-3 font-weight-400 text-white">
-                                <span class="font-weight-700">Multipurpose Bootstrap Theme</span>
-                            </h2>
-                            <p class="text-lg text-white mt-3 lh-180 c-white mt-4">
-                                Boomerang is an innovative HTML template solution based on Bootstrap 4 built with modular components that makes it reusable and easy to work on.
-                            </p>
-							<a href="#" class="btn btn-styled btn-white btn-circle mt-4" data-scroll-to="#scroll_section">Start exploring</a>
+                                    <div class="swiper-slide animate-on-scroll fadeIn" data-wow-delay="0.4s">
+                                        <div class="block block--style-5 mb-0">
+                                            <div class="block-image">
+                                                <a href="assets/images/prv/other/msg5.png" data-fancybox="apps">
+                                                    <img src="assets/images/prv/other/msg5.png">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </section>
 
-    <section class="slice sct-color-1">
-        <div class="container">
-            <div class="row cols-xs-space cols-sm-space cols-md-space align-items-center">
-                <div class="col-lg-5">
-                    <small class="heading heading-sm strong-300 text-uppercase ls-2 c-gray-light">Theme Styles</small>
-                    <h2 class="heading heading-4 line-height-1_6 strong-500 mt-3">
-                        You can now choose the theme's style: light or dark. By changing a single line of code you get an entirely new website.
-                    </h2>
+                    <!-- Team -->
+                    <section class="slice-lg sct-color-1 border-top"  id="team">
+                        <div class="container">
 
-                    <a href="documentation/customization/theme-style.html" class="mt-4">See the Docs</a>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row mt-5 mt-lg-0 cols-xs-space cols-sm-space cols-md-space">
-                        <div class="col-lg-6">
-                            <div class="block block-image-holder z-depth-3">
-                                <div class="block-image">
-                                    <div class="view view-first">
-                                        <a href="documentation/customization/theme-style.html">
-                                            <img src="assets/images/presentation/theme-light.jpg" class="img-fluid rounded z-depth-3">
+                            <div class="section-title section-title--style-1 text-center mb-2 animate-on-scroll fadeInDown">
+                                <h3 class="section-title-inner text-normal strong-600">
+                                    <span>Scalytics Team</span>
+                                </h3>
+                                <span class="section-title-delimiter clearfix d-none"></span>
+                            </div>
+
+                            <span class="clearfix"></span>
+
+                            <!--<div class="fluid-paragraph fluid-paragraph-sm c-gray-light strong-300 text-center animate-on-scroll fadeInDown" data-wow-delay="0.3s">
+                                <h2 class="heading heading-5 c-gray-light text-uppercase strong-600">
+                                    General Management
+                                </h2>
+                            </div>-->
+
+                            <div class="row cols-md-space cols-sm-space cols-xs-space animate-hover-slide-2" style="margin-top: 20px;
+                             align-content: center; text-align: center; width: 100%;display: -moz-box;-moz-box-pack: center;-moz-box-align: center;display: -webkit-box;-webkit-box-pack: center;-webkit-box-align: center;display: box;box-pack: center;box-align: center;">
+
+                                <!--<div class="col-12 col-lg-4 animate-on-scroll fadeInDown">
+                                    <div class="icon-block icon-block--style-1-v5 px-4">-->
+                                <div class="block block--style-5 animate-on-scroll fadeInUp"  style="margin: 1em;display: inline-block;">
+                                    <div class="block-image">
+                                        <a href="#">
+                                            <img src="assets/images/prv/people/al-bassery.jpg">
                                         </a>
                                     </div>
+                                    <div class="block-caption--over text-center">
+                                        <h4 class="block-title-upper text-uppercase">CEO<br>& Co-founder</h4>
+                                        <h3 class="heading heading-6 strong-600">Al Basseri</h3>
+                                        <ul class="social-media social-media--style-1 social-media-circle mt-1">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="block block-image-holder z-depth-3">
-                                <div class="block-image">
-                                    <div class="view view-first">
-                                        <a href="documentation/customization/theme-style.html">
-                                            <img src="assets/images/presentation/theme-dark.jpg" class="img-fluid rounded">
+
+
+                                <div class="block block--style-5 animate-on-scroll fadeInUp" style="margin: 1em;display: inline-block;">
+                                    <div class="block-image">
+                                        <a href="#">
+                                            <img src="assets/images/prv/people/alexander-alten-lorenz.jpg">
                                         </a>
                                     </div>
+                                    <div class="block-caption--over text-center">
+                                        <h4 class="block-title-upper text-uppercase">CTO<br>& Co-founder</h4>
+                                        <h3 class="heading heading-6 strong-600">Alex Alten-Lorenz</h3>
+                                        <ul class="social-media social-media--style-1 social-media-circle mt-1">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="block block--style-5 animate-on-scroll fadeInUp" style="margin: 1em;display: inline-block;">
+                                    <div class="block-image">
+                                        <a href="#">
+                                            <img src="assets/images/prv/people/jorge-quiane.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="block-caption--over text-center">
+                                        <h4 class="block-title-upper text-uppercase">Chief Scientist<br>& Co-founder</h4>
+                                        <h3 class="heading heading-6 strong-600">Jorge Quiane-Ruiz</h3>
+                                        <ul class="social-media social-media--style-1 social-media-circle mt-1">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="block block--style-5 animate-on-scroll fadeInUp" style="margin: 1em;display: inline-block;">
+                                    <div class="block-image">
+                                        <a href="#">
+                                            <img src="assets/images/prv/people/bertty-rojas.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="block-caption--over text-center">
+                                        <h4 class="block-title-upper text-uppercase">Senior Software Engineer & Co-founder</h4>
+                                        <h3 class="heading heading-6 strong-600">Bertty Rojas</h3>
+                                        <ul class="social-media social-media--style-1 social-media-circle mt-1">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="block block--style-5 animate-on-scroll fadeInUp" style="margin: 1em;display: inline-block;">
+                                    <div class="block-image">
+                                        <a href="#">
+                                            <img src="assets/images/prv/people/pardo-rodrigo.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="block-caption--over text-center">
+                                        <h4 class="block-title-upper text-uppercase">Senior Software Enginner & Co-founder</h4>
+                                        <h3 class="heading heading-6 strong-600">Rodrigo Pardo-Meza</h3>
+                                        <ul class="social-media social-media--style-1 social-media-circle mt-1">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="ion ion-social-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <!--<div class="col-lg-4">
+                                    <div class="card card-blockquote  animate-on-scroll fadeInDown">
+                                        <div class="card-body">
+                                            <div class="block-author">
+                                                <div class="author-image ">
+                                                    <img src="assets/images/prv/people/basseri-al.png">
+                                                </div>
+                                                <div class="author-info">
+                                                    <span class="d-block heading-6 author-name strong-600 c-base-1">Al Basseri</span>
+                                                    <span class="heading-xs author-desc">CEO</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-4">
+                                    <div class="card card-blockquote  animate-on-scroll fadeInDown">
+                                        <div class="card-body">
+                                            <div class="block-author">
+                                                <div class="author-image ">
+                                                    <img src="assets/images/prv/people/alexander.jpg">
+                                                </div>
+                                                <div class="author-info">
+                                                    <span class="d-block heading-6 author-name strong-600 c-base-1">Alex Alten-Lorenz</span>
+                                                    <span class="heading-xs author-desc">CTO</span>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row cols-xs-space cols-md-space cols-lg-space" style="margin-top: 20px">
+
+
+                                <div class="col-lg-4">
+                                    <div class="card card-blockquote  animate-on-scroll fadeInDown">
+                                        <div class="card-body">
+                                            <div class="block-author">
+                                                <div class="author-image ">
+                                                    <img src="assets/images/prv/people/jefazo3.jpg">
+                                                </div>
+                                                <div class="author-info">
+                                                    <span class="d-block heading-6 author-name strong-600 c-base-1">Jorge Quiane-Ruiz</span>
+                                                    <span class="heading-xs author-desc">Chief Scientist</span>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="card card-blockquote animate-on-scroll fadeInDown">
+                                        <div class="card-body">
+                                            <div class="block-author">
+                                                <div class="author-image ">
+                                                    <img src="assets/images/prv/people/bertty2.jpg">
+                                                </div>
+                                                <div class="author-info">
+                                                    <span class="d-block heading-6 author-name strong-600 c-base-1">Bertty Contreras Rojas</span>
+                                                    <span class="heading-xs author-desc">Senior Software Engineer</span>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="card card-blockquote animate-on-scroll fadeInDown">
+                                        <div class="card-body">
+                                            <div class="block-author">
+                                                <div class="author-image ">
+                                                    <img src="assets/images/prv/people/yo.jpg">
+                                                </div>
+                                                <div class="author-info">
+                                                    <span class="d-block heading-6 author-name strong-600 c-base-1">Rodrigo Pardo-Meza</span>
+                                                    <span class="heading-xs author-desc">Senior Software Engineer</span>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>-->
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--Forma con mensaje, sera posible cambiar el Shape?!!!-->
+                    <!--<section class="slice-xl bg-base-1" style="padding-top: 350px; padding-bottom: 200px;">
+                        <div class="shape-container" data-shape-fill="sct-color-1" data-shape-style="opaque_waves_1" data-shape-position="top" style="height: 350px;">
+                            <svg class="shape-item" fill="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
+                                <path d="M 1000 310 l 2 -279 c -155 -36 -310 135 -415 164 c -102.64 28.35 -149 -32 -232 -31 c -80 1 -142 53 -229 80 c -65.54 20.34 -101 15 -126 11.61 v 54.39 z"></path>
+                                <path d="M 1000 320 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z"></path>
+                                <path d="M 1000 310 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>
+                             </svg>
+                        </div>
+
+                        <div class="container container-lg">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 text-center">
+                                    <h2 class="heading heading-inverse heading-1 strong-600 mt-3">
+                                        Start executing your Jobs in the most convenient way!
+                                    </h2>
+                                    <a href="https://goo.gl/9BbH7R" class="btn btn-styled btn-lg btn-white btn-outline btn-circle mt-5">Contact us</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </section>-->
 
-    <section class="slice sct-color-1">
-        <div class="container sct-inner">
-            <div class="section-title section-title--style-1 text-center mb-3">
-                <h3 class="section-title-inner heading-2 strong-600 text-normal">
-                    <span>Over 200 ready to use layouts</span>
-                </h3>
-                <span class="section-title-delimiter clearfix d-none"></span>
-            </div>
+                    <section class="swiper-js-container background-image-holder">
+                        <div class="swiper-container" data-swiper-autoplay="true" data-swiper-effect="slide" data-swiper-items="1" data-swiper-space-between="0" >
+                            <div class="swiper-wrapper">
+                                <!-- Slide -->
+                                <div class="swiper-slide" data-swiper-autoplay="8000">
+                                    <div class="holder-item holder-item-light has-bg-cover bg-size-cover" style="padding-bottom: 120px; background-image: url(assets/images/backgrounds/slider/wow.jpg); background-position: bottom center;">
+                                        <!--<span class="mask mask-base-1--style-1" style="background: rgba(109,14,177,0.4) !important;"></span>-->
+                                        <span class="mask mask-base-1--style-1" style="background: rgba(0,0,0,0.65) !important;"></span>
 
-            <span class="clearfix"></span>
 
-            <div class="fluid-paragraph fluid-paragraph-sm c-gray-light strong-300 text-center">
-                Everything you need in one package. Blog, portfolio, e-commerce, real estate and plenty of secondary pages that are responsive and optimized
-                based on user experience.
-            </div>
+                                        <div class="container container-lg"  style="padding-top: 300px">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-8 text-center">
+                                                    <h2 class="heading heading-inverse heading-1 strong-600 mt-3">
+                                                        Start executing your Jobs in the most convenient way!
+                                                    </h2>
+                                                    <a href="index.html" class="btn btn-styled btn-lg btn-white btn-outline btn-circle mt-5">Contact us</a>
+                                                </div>
+                                            </div>
+                                        </div>
 
-            <span class="space-xs-lg"></span>
+                                        <!--<div class="container container-lg slice--offset-top d-flex align-items-center">
+                                            <div class="col px-0">
+                                                <div class="row">
+                                                    <div style="padding-top: 100px" class="col-lg-6">
+                                                        <h2 class="heading heading-xl strong-600 text-normal line-height-1_2 animated" data-animation-in="fadeInDownBig" data-animation-delay="200">
+                                                            Code Once. Deploy on any Cloud
+                                                        </h2>
+                                                        <p class="lead animated mt-4" data-animation-in="fadeInUpBig" data-animation-delay="200">
+                                                            Scalytics is the World's First Intelligent Cloud Scheduler.
+                                                        </p>
 
-            <div class="row-wrapper">
-                <div class="row cols-xs-space cols-sm-space cols-md-space">
-                    <div class="col-12 col-lg-4">
-                        <div class="feature feature--boxed-border feature--boxed-border-light border">
-                            <div class="">
-                                <div class="icon-block icon-block--style-1-v5">
-                                    <div class="block-icon">
-                                        <i class="icon-real-estate-001"></i>
-                                    </div>
-                                    <div class="block-content">
-                                        <h3 class="heading heading-4 strong-400 text-capitalize">
-                                            Homepages
-                                        </h3>
-                                        <p class="">
-                                            Build anything from classic, minimlist to modern page designs.
-                                        </p>
-                                        <a href="pages-home.html" class="link link-xs link--style-2 text-uppercase strong-600 mt-3"">See pages</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-4">
-                        <div class="feature feature--boxed-border feature--boxed-border-light border">
-                            <div class="">
-                                <div class="icon-block icon-block--style-1-v5">
-                                    <div class="block-icon">
-                                        <i class="icon-ecommerce-cart-plus"></i>
-                                    </div>
-                                    <div class="block-content">
-                                        <h3 class="heading heading-4 strong-600 text-capitalize">
-                                            Inner pages
-                                        </h3>
-                                        <p>
-                                            Page example for about, services, contact and much more.
-                                        </p>
-                                        <a href="pages-inner.html" class="link link-xs link--style-2 text-uppercase strong-600 mt-3">See pages</a>
+                                                        <a href="https://goo.gl/9BbH7R" class="btn btn-styled btn-lg btn-white btn-circle btn-outline mt-5 animated" data-animation-in="fadeInUpBig" data-animation-delay="1000" data-scroll-to="#sct_what_we_do">
+                                                            See what we do
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="col-12 col-lg-4">
-                        <div class="feature feature--boxed-border feature--boxed-border-light border">
-                            <div class="">
-                                <div class="icon-block icon-block--style-1-v5">
-                                    <div class="block-icon">
-                                        <i class="icon-basic-book-pencil"></i>
-                                    </div>
-                                    <div class="block-content">
-                                        <h3 class="heading heading-4 strong-600 text-capitalize">
-                                            Profile pages
-                                        </h3>
-                                        <p>
-                                            Need layouts for account and profile pages? We got you covered.
-                                        </p>
-                                        <a href="pages-profile.html" class="link link-xs link--style-2 text-uppercase strong-600 mt-3">See pages</a>
-                                    </div>
-                                </div>
+                            <div class="shape-container" data-shape-fill="sct-color-1" data-shape-style="opaque_waves_1" data-shape-position="top" style="height: 350px;">
+                                <svg class="shape-item" fill="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
+                                    <path d="M 1000 310 l 2 -279 c -155 -36 -310 135 -415 164 c -102.64 28.35 -149 -32 -232 -31 c -80 1 -142 53 -229 80 c -65.54 20.34 -101 15 -126 11.61 v 54.39 z"></path>
+                                    <path d="M 1000 320 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z"></path>
+                                    <path d="M 1000 310 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>
+                                </svg>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="row cols-xs-space cols-sm-space cols-md-space">
-                    <div class="col-12 col-lg-4">
-                        <div class="feature feature--boxed-border feature--boxed-border-light border">
-                            <div class="">
-                                <div class="icon-block icon-block--style-1-v5">
-                                    <div class="block-icon">
-                                        <i class="icon-basic-picture-multiple"></i>
-                                    </div>
-                                    <div class="block-content">
-                                        <h3 class="heading heading-4 strong-600 text-capitalize">
-                                            Blog pages
-                                        </h3>
-                                        <p>
-                                            Various blog page examples for any type of content.
-                                        </p>
-                                        <a href="pages-blog.html" class="link link-xs link--style-2 text-uppercase strong-600 mt-3">See pages</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </section>
 
-                    <div class="col-12 col-lg-4">
-                        <div class="feature feature--boxed-border feature--boxed-border-light border">
-                            <div class="">
-                                <div class="icon-block icon-block--style-1-v5">
-                                    <div class="block-icon">
-                                        <i class="icon-real-estate-077"></i>
-                                    </div>
-                                    <div class="block-content">
-                                        <h3 class="heading heading-4 strong-600 text-capitalize">
-                                            Shop pages
-                                        </h3>
-                                        <p>
-                                            Four shop layouts with homepage and inner page examples.
-                                        </p>
-                                        <a href="pages-shop.html" class="link link-xs link--style-2 text-uppercase strong-600 mt-3">See pages</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- FOOTER -->
+                    <footer id="footer" class="footer-inverse">
+    <div class="footer-top">
+        <div class="container container-lg">
+            <!-- Contact us!!!-->
+            <div class="row cols-xs-space cols-sm-space cols-md-space">
+                <div class="col-lg-3">
+                    <div class="col">
+                        <h4 class="heading heading-xs strong-600 text-uppercase mb-3">
+                            Quick links
+                        </h4>
 
-                    <div class="col-12 col-lg-4">
-                        <div class="feature feature--boxed-border feature--boxed-border-light border">
-                            <div class="">
-                                <div class="icon-block icon-block--style-1-v5">
-                                    <div class="block-icon">
-                                        <i class="icon-basic-webpage-multiple"></i>
-                                    </div>
-                                    <div class="block-content">
-                                        <h3 class="heading heading-4 strong-600 text-capitalize">
-                                            Real Estate pages
-                                        </h3>
-                                        <p>
-                                            A few examples for listing real estate properties and not only.
-                                        </p>
-                                        <a href="pages-real-estate.html" class="link link-xs link--style-2 text-uppercase strong-600 mt-3">See pages</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="slice-lg sct-color-1" id="sct_full_demos">
-        <div class="container">
-            <div class="section-title section-title--style-1 text-center mb-3">
-                <h3 class="section-title-inner heading-2 strong-600 text-normal">
-                    <span class="d-block">Startup demos for all</span>
-                </h3>
-                <span class="section-title-delimiter clearfix d-none"></span>
-            </div>
-            <span class="clearfix"></span>
-            <div class="fluid-paragraph text-center">
-                <p class="text-lg line-height-1_8 c-gray-light strong-300">
-                    Create your website using one of the demos below. Our demo's components are modular and interchangable, meaning you can take an element or a page from one demo and use it another without any additional setup.
-                </p>
-            </div>
-            <span class="space-xs-xl"></span>
-            <div class="">
-                <div class="row">
-                                        <div class="col-md-6 startup agency">
-                        <div class="block block-image-holder mb-5 image-animate-wrapper">
-                            <div class="block-image image-animate--hover">
-                                <a href="demos/startup-agency" target="_blank">
-                                    <img src="assets/images/presentation/demos/startup/agency.jpg" class="rounded">
-                                </a>
-                            </div>
-
-                            <div class="card-body px-0">
-                                <div class="">
-                                    <a href="html/startup-agency" class="heading heading-4 strong-500" target="_blank">
-                                        Startup Agency                                    </a>
-                                    <p class="c-gray-light mt-2 d-none">
-                                        Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                        <div class="col-md-6 startup app">
-                        <div class="block block-image-holder mb-5 image-animate-wrapper">
-                            <div class="block-image image-animate--hover">
-                                <a href="demos/startup-app" target="_blank">
-                                    <img src="assets/images/presentation/demos/startup/app.jpg" class="rounded">
-                                </a>
-                            </div>
-
-                            <div class="card-body px-0">
-                                <div class="">
-                                    <a href="html/startup-app" class="heading heading-4 strong-500" target="_blank">
-                                        Startup App                                    </a>
-                                    <p class="c-gray-light mt-2 d-none">
-                                        Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                        <div class="col-md-6 startup app">
-                        <div class="block block-image-holder mb-5 image-animate-wrapper">
-                            <div class="block-image image-animate--hover">
-                                <a href="demos/startup-analitycs" target="_blank">
-                                    <img src="assets/images/presentation/demos/startup/analitycs.jpg" class="rounded">
-                                </a>
-                            </div>
-
-                            <div class="card-body px-0">
-                                <div class="">
-                                    <a href="html/startup-analitycs" class="heading heading-4 strong-500" target="_blank">
-                                        Startup Analitycs                                    </a>
-                                    <p class="c-gray-light mt-2 d-none">
-                                        Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                        <div class="col-md-6 startup classic">
-                        <div class="block block-image-holder mb-5 image-animate-wrapper">
-                            <div class="block-image image-animate--hover">
-                                <a href="demos/startup-classic" target="_blank">
-                                    <img src="assets/images/presentation/demos/startup/classic.jpg" class="rounded">
-                                </a>
-                            </div>
-
-                            <div class="card-body px-0">
-                                <div class="">
-                                    <a href="html/startup-classic" class="heading heading-4 strong-500" target="_blank">
-                                        Startup Classic                                    </a>
-                                    <p class="c-gray-light mt-2 d-none">
-                                        Flexible plugin that utilizes a handful of classes for easy toggle behavior.                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                    </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="slice has-bg-cover bg-size-cover" style="background-image: url(assets/images/backgrounds/slider/img-36.jpg); background-position: center center;">
-        <span class="mask mask-base-1--style-1"></span>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-7 text-center">
-                    <h2 class="heading heading-1 strong-600 c-white mb-5">
-                        Documentation and Shortcodes
-                    </h2>
-
-                    <p class="lead line-height-1_8 c-white">
-                        Get started fast and easy with Boomerang using the documentation and shortcode examples. No matter
-                        you are a developer or new to web design, you will
-                        find our theme very easy to customize with
-                        an intuitive HTML markup.
-                    </p>
-
-                    <a href="documentation/getting-started/introduction.html" class="btn btn-styled btn-lg btn-white btn-circle mt-5" target="_blank">Open the Docs</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer" class="footer ">
-    <div class="footer-bottom py-4">
-        <div class="container">
-            <div class="row cols-xs-space col-sm-space align-items-center">
-                <div class="col-lg-3 col-12">
-                    <div class="text-center text-lg-left">
-                        <div class="copyright">
-                            <ul class="copy-links no-margin">
-                                <li>
-                                    &copy; 2018 Webpixels
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="text-center">
-                        <ul class="footer-menu footer-menu-sm">
-                            <li>
-                                <a href="https://webpixels.io" target="_blank" style="padding-left: 0;">Official website</a>
-                            </li>
-                            <li>
-                                <a href="https://instagram.com/webpixels.io" target="_blank" style="padding-left: 0;">Instagram</a>
-                            </li>
-                            <li>
-                                <a href="https://facebook.com/webpixels" target="_blank" style="padding-left: 0;">Facebook</a>
-                            </li>
-                            <li>
-                                <a href="http://support.wrapbootstrap.com/knowledge_base/topics/usage-licenses" target="_blank">License</a>
-                            </li>
-                            <li>
-                                <a href="https://goo.gl/9BbH7R" target="_blank">Buy now</a>
-                            </li>
-                        </ul>
+                        <ul class="footer-links">
+                             <li>
+                                 <a href="#">Home</a>
+                             </li>
+                             <li>
+                                 <a href="#">About us</a>
+                             </li>
+                             <li>
+                                 <a href="#">Services</a>
+                             </li>
+                             <li>
+                                 <a href="#">Blog</a>
+                             </li>
+                             <li>
+                                 <a href="#">Contact</a>
+                             </li>
+                         </ul>
                     </div>
                 </div>
 
                 <div class="col-lg-3">
-                    <div class="text-center text-lg-right">
-                        <ul class="social-media social-media--style-1-v4">
-                            <li>
-                                <a href="https://www.facebook.com/webpixels/" class="facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/webpixels.io/" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://dribbble.com/webpixels" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                            </li>
+                    <div class="col">
+                       <h4 class="heading heading-xs strong-600 text-uppercase mb-3">
+                           Support
+                       </h4>
+
+                       <ul class="footer-links">
+                            <li><a href="#">Help center</a></li>
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">FAQ</a></li>
                         </ul>
+                     </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="col">
+                       <h4 class="heading heading-xs strong-600 text-uppercase mb-3">
+                           Archives
+                       </h4>
+
+                       <ul class="footer-links">
+                            <li><a href="#" title="Help center">May 2018</a></li>
+                            <li><a href="#" title="Discussions">June 2018</a></li>
+                            <li><a href="#" title="Contact support">July 2018</a></li>
+                            <li><a href="#" title="Blog">August 2018</a></li>
+                            <li><a href="#" title="Jobs">September 2018</a></li>
+                            <li><a href="#" title="Jobs">October 2018</a></li>
+                            <li><a href="#" title="Jobs">November 2018</a></li>
+                        </ul>
+                     </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="col">
+                        <h4 class="heading heading-xs strong-600 text-uppercase mb-3">
+                            About Boomerang
+                        </h4>
+                        <p>
+                            150 Southeast Pidgeon Meadow
+                            <br>
+                            Claflin Terrace, 305458
+                        </p>
+                        <p class="lead mt-4 mb-4">
+                            E: <a href="#">support@webpixels.io</a>
+                            <br>
+                            T: 0755.222.333
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-   
-</main>
+                </div>
+            </div>
+        </div><!-- END: st-pusher -->
+    </div><!-- END: st-container -->
+</div><!-- END: body-wrap -->
 
+
+
+
+
+
+
+<!--End of Page!!-->
 <!-- SCRIPTS -->
-<a href="#" class="back-to-top btn-back-to-top"></a>
+<a href="#" class="back-to-top btn-back-to-top" style="background: black !important;"></a>
 
 <!-- Core -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
