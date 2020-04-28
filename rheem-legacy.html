@@ -413,11 +413,6 @@
                                                 Architecture Overview
                                             </a>
                                         </li>
-                                        <li class="nav-item dropdown megamenu">
-                                            <a class="nav-link" href="rheem.html" data-animation-in="fadeInUpBig" data-animation-delay="1000" data-scroll-to="#features">
-                                                Features
-                                            </a>
-                                        </li>
                                     </ul>
 
                                 </div>
@@ -496,15 +491,11 @@
                                     </h3>
 
                                     <p class="lead line-height-1_8">
-                                        <i class="fas fa-check"></i>&nbsp;&nbsp;Provides an abstraction on top of Big Data platforms.
+                                        Rheem enables users to run data analytics over multiple data processing platforms. For this, it provides an abstraction on top of existing platforms in order to run data analytic tasks on top of any set of platforms.
                                     </p>
 
                                     <p class="lead line-height-1_8">
-                                        <i class="fas fa-check"></i>&nbsp;&nbsp;Run data analytics over multiple data processing platforms.
-                                    </p>
-
-                                    <p class="lead line-height-1_8">
-                                        <i class="fas fa-check"></i>&nbsp;&nbsp;Users can 100% focus on the logics of their applications.
+                                        As a result, users can focus on the logics of their applications rather on the intricacies of the underlying platforms.
                                     </p>
                                 </div>
 
@@ -543,13 +534,13 @@
                         </div>
                     </section>
 
-                    <section class="slice-sm sct-color-1" id="howworks">
+                    <section class="slice sct-color-1" id="howworks">
                         <div class="container">
                             <div class="row cols-xs-space cols-sm-space cols-md-space">
                                 <div class="col-lg-7">
                                     <small class="heading heading-sm strong-300 text-uppercase ls-2 c-gray-light">How Rheem works?</small>
                                     <h2 class="heading heading-1 strong-400 font-custom-4 mt-3">
-                                        Write once, run on any platform
+                                        Rheem uses a Three-layer data processing abstraction that sits between user applications and data processing platforms.
                                     </h2>
                                 </div>
                             </div>
@@ -558,180 +549,89 @@
 
                             <div class="row">
                                 <div class="col-lg-4 ml-lg-auto">
-                                    <h6 class="heading-sm" style="font-size: 15px !important;">
-                                        Express physical plans in terms of algorithmic needs only, without being tied to a particular processing platform.
+                                    <h6 class="heading-sm">
+                                        Rheem decouples physical and execution levels. This separation allows applications to express physical plans in terms of algorithmic needs only, without being tied to a particular processing platform.
                                     </h6>
 
+                                    <h6 class="heading-sm">
+                                        The communication between these physical and execution levels is enabled by operators defined as UDF. These three layers allow Rheem to provide applications with platform independence. This is the first step to realize Multi-platform task execution.
+                                    </h6>
                                     <span class="clearfix"></span>
-                                    <h6 class="heading-md c-gray-light mt-3">This separation unleash amazing capabilities</h6>
+                                    <h6 class="heading-sm c-gray-light mt-3">This separation unleash amazing capabilities</h6>
                                 </div>
 
                                 <div class="col-lg-6">
 
+
+                                        <p>
+                                            Rheem provides a set of operators at each layer. Basically, in each layer them works as follows:
+                                        </p>
                                     <ul>
+                                        <!--<li>
+                                        <p>
+                                            Application Layer: A "Logical Operator" is an abstract UDF that acts as an application-specific unit of data processing. Each operator work as a template where users provide the logic of their tasks.
+                                        </p></li>-->
                                         <li>
-                                            <p style="font-size: 15px !important;">
-                                                As application uses Rheem Operators, an abstract UDF that acts as an application-specific unit of data processing.
-                                            </p></li>
+                                        <p>
+                                            Application Layer: A "Rheem Operator" is an abstract UDF that acts as an application-specific unit of data processing. Each operator work as a template where users provide the logic of their tasks.
+                                        </p></li>
                                         <li>
-                                            <p style="font-size: 15px !important;">
-                                                The Core expose a pool of Physical Operators, a platform independent implementation of a Rheem Operator"
-                                            </p></li>
+                                        <p>
+                                            Core Layer: Expose a pool of Physical Operators, each representing an algorithmical decision for executing an analytic task. A "Physical Operator" is a platform independent implementation of a "Rheem Operator".
+                                        </p></li>
                                         <li>
-                                            <p style="font-size: 15px !important;">
-                                                Finally the Execution Operator defines how a task is executed on the underlying processing platform.
-                                            </p>
-                                        </li>
+                                        <p>
+                                            Platform Layer: A "Execution Operator" defines how a task is executed on the underlying processing platform. In other words, is  the platform-dependent implementation of a Physical Operator.
+                                        </p></li>
                                     </ul>
+                                        <p>
+                                            Then Rheem relies on existing data processing platforms to actually run input tasks.
+                                        </p>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <section  class="slice-sm sct-color-1" id="architecture">
+                    <section  class="slice sct-color-1" id="architecture">
                         <div class="container container-lg">
-                            <h3 class="heading heading-1 strong-400 text-normal mb-3" style="text-align: center">Architecture</h3>
-                            <p class="text-lg line-height-1_8" style="text-align: center">Look what happened inside the plan executions</p>
+                        <h3 class="heading heading-1 strong-400 text-normal mb-3" style="text-align: center">Architecture</h3>
+                        <p class="text-lg line-height-1_8" style="text-align: center">Look what happened inside the plan executions</p>
 
-                            <div class="row-wrapper">
-                                <span class="space-xs-lg"></span>
-                                <div class="row cols-xs-space cols-sm-space cols-md-space">
-                                    <div class="col-lg-6">
-                                        <!--<a href="./assets/images/rheem/architecture.png" class="animate-on-scroll fadeInUp" data-fancybox="group_1">-->
-                                        <a href="./assets/images/rheem/architecture.png" data-fancybox="group_1">
-                                            <img src="./assets/images/rheem/architecture.png" class="img-fluid rounded">
-                                        </a>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <!--<a href="./assets/images/rheem/plan.png" class="animate-on-scroll fadeInUp" data-wow-delay="0.3s" data-fancybox="group_1">-->
-                                        <a href="./assets/images/rheem/plan.png" data-fancybox="group_1">
-                                            <img src="./assets/images/rheem/plan.png" class="img-fluid rounded">
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                                <!--<div class="row cols-xs-space cols-sm-space cols-md-space">
-                                    <div class="col-lg-6">
-                                        <a href="../../assets/images/prv/architecture/img-4.jpg" class="animate-on-scroll fadeInUp" data-wow-delay="0.9s" data-fancybox="group_1">
-                                            <img src="../../assets/images/prv/architecture/img-4.jpg" class="img-fluid rounded">
-                                        </a>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <a href="../../assets/images/prv/architecture/img-5.jpg" class="animate-on-scroll fadeInUp" data-wow-delay="1.2s" data-fancybox="group_1">
-                                            <img src="../../assets/images/prv/architecture/img-5.jpg" class="img-fluid rounded">
-                                        </a>
-                                    </div>
-                                </div>-->
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="slice-sm sct-color-1 mt-5" id="features">
-                        <div class="container container-lg">
-
-                            <h3 class="heading heading-1 strong-400 text-normal mb-3" style="text-align: center">Features</h3>
-                            <p class="text-lg line-height-1_8 mb-5" style="text-align: center">Enjoy this advantages using Rheem</p>
-
-                            <div class="row cols-xs-space cols-sm-space cols-md-space mb-3">
-                                <div class="col-12 col-lg-4">
-                                    <div class="icon-block icon-block--style-1-v5 px-4">
-                                        <div class="block-icon">
-                                            <i class="fas fa-bezier-curve fa-10x" style="display: block;margin-left: auto;margin-right: auto;width: 50%; font-size: 6rem;text-align: center"></i>
-                                            <!--<img src="./assets/images/icons/purple/png/positive-dynamic.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">-->
-                                        </div>
-                                        <div class="block-content">
-                                            <h3 class="heading heading-4 strong-600 text-capitalize" style="text-align: center">Cross-platforms</h3>
-                                            <p style="text-align: center">
-                                                Run a single data analytic task on top of any set of data processing platforms.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-lg-4">
-                                    <div class="icon-block icon-block--style-1-v5 px-4">
-                                        <div class="block-icon">
-                                            <i class="fa fa-clock fa-10x" style="display: block;margin-left: auto;margin-right: auto;width: 50%; font-size: 6rem;text-align: center"></i>
-                                            <!--<img src="./assets/images/icons/purple/png/positive-dynamic.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">-->
-                                        </div>
-                                        <div class="block-content">
-                                            <h3 class="heading heading-4 strong-600 text-capitalize" style="text-align: center">High-Efficiency</h3>
-                                            <p style="text-align: center">
-                                                It selects the best available data processing platform for any incoming query.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-lg-4">
-                                    <div class="icon-block icon-block--style-1-v5 px-4">
-                                        <div class="block-icon">
-                                            <i class="fa fa-puzzle-piece fa-10x" style="display: block;margin-left: auto;margin-right: auto;width: 50%; font-size: 6rem;text-align: center"></i>
-                                            <!--<img src="./assets/images/icons/purple/png/positive-dynamic.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">-->
-                                        </div>
-                                        <div class="block-content">
-                                            <h3 class="heading heading-4 strong-600 text-capitalize" style="text-align: center">Flexibility</h3>
-                                            <p style="text-align: center">
-                                                User defined functions (UDFs) as first-class citizens, enabling extensibility and adaptability.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                        <div class="row-wrapper">
+                            <span class="space-xs-lg"></span>
                             <div class="row cols-xs-space cols-sm-space cols-md-space">
-                                <div class="col-12 col-lg-4">
-                                    <div class="icon-block icon-block--style-1-v5 px-4">
-                                        <div class="block-icon">
-                                            <i class="fas fa-child fa-10x" style="display: block;margin-left: auto;margin-right: auto;width: 50%; font-size: 6rem;text-align: center"></i>
-                                            <!--<img src="./assets/images/icons/purple/png/positive-dynamic.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">-->
-                                        </div>
-                                        <div class="block-content">
-                                            <h3 class="heading heading-4 strong-600 text-capitalize" style="text-align: center">Ease-of-Use</h3>
-                                            <p style="text-align: center">
-                                                A simple interface that allows developers to focus only on the logics of their application.
-                                            </p>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-6">
+                                    <!--<a href="./assets/images/rheem/architecture.png" class="animate-on-scroll fadeInUp" data-fancybox="group_1">-->
+                                    <a href="./assets/images/rheem/architecture.png" data-fancybox="group_1">
+                                        <img src="./assets/images/rheem/architecture.png" class="img-fluid rounded">
+                                    </a>
                                 </div>
 
-                                <div class="col-12 col-lg-4">
-                                    <div class="icon-block icon-block--style-1-v5 px-4">
-                                        <div class="block-icon">
-                                            <i class="fa fa-piggy-bank fa-10x" style="display: block;margin-left: auto;margin-right: auto;width: 50%; font-size: 6rem;text-align: center"></i>
-                                            <!--<img src="./assets/images/icons/purple/png/positive-dynamic.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">-->
-                                        </div>
-                                        <div class="block-content">
-                                            <h3 class="heading heading-4 strong-600 text-capitalize" style="text-align: center">Cost Saving</h3>
-                                            <p style="text-align: center">
-                                                Fast development of data analytic applications.
-                                            </p>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-6">
+                                    <!--<a href="./assets/images/rheem/plan.png" class="animate-on-scroll fadeInUp" data-wow-delay="0.3s" data-fancybox="group_1">-->
+                                    <a href="./assets/images/rheem/plan.png" data-fancybox="group_1">
+                                        <img src="./assets/images/rheem/plan.png" class="img-fluid rounded">
+                                    </a>
                                 </div>
 
-                                <div class="col-12 col-lg-4">
-                                    <div class="icon-block icon-block--style-1-v5 px-4">
-                                        <div class="block-icon">
-                                            <i class="fa fa-code-branch fa-10x" style="display: block;margin-left: auto;margin-right: auto;width: 50%; font-size: 6rem;text-align: center"></i>
-                                            <!--<img src="./assets/images/icons/purple/png/positive-dynamic.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">-->
-                                        </div>
-                                        <div class="block-content">
-                                            <h3 class="heading heading-4 strong-600 text-capitalize" style="text-align: center">Open Source</h3>
-                                            <p style="text-align: center">
-                                                All code is on GitHub under Apache License.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+
+                            <!--<div class="row cols-xs-space cols-sm-space cols-md-space">
+                                <div class="col-lg-6">
+                                    <a href="../../assets/images/prv/architecture/img-4.jpg" class="animate-on-scroll fadeInUp" data-wow-delay="0.9s" data-fancybox="group_1">
+                                        <img src="../../assets/images/prv/architecture/img-4.jpg" class="img-fluid rounded">
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <a href="../../assets/images/prv/architecture/img-5.jpg" class="animate-on-scroll fadeInUp" data-wow-delay="1.2s" data-fancybox="group_1">
+                                        <img src="../../assets/images/prv/architecture/img-5.jpg" class="img-fluid rounded">
+                                    </a>
+                                </div>
+                            </div>-->
+                        </div>
                         </div>
                     </section>
-
-                    <span class="space-xs-xl"></span>
 
                     <footer id="footer" class="footer">
                         <div class="footer-top py-5">
