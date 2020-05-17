@@ -53,6 +53,18 @@
 
 <style>
 
+    @font-face {
+        font-family: myboldFont;
+        src: url('./assets/fonts/jetbrainsmono/ttf/JetBrainsMono-Bold-Italic.ttf')  format('truetype'),
+        url('./assets/fonts/jetbrainsmono/web/woff/JetBrainsMono-Bold-Italic.woff')  format('woff');
+    }
+
+    .logo-font{
+
+        font-family: myboldFont;
+        font-size: 84px;
+    }
+
     .block--style-5 .block-caption--over {
         height: 89px; !important;
     }
@@ -359,10 +371,13 @@
                         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar--shadow">
                             <div class="container navbar-container">
                                 <!-- Brand/Logo -->
-                                <a class="navbar-brand" href="index.html">
-                                    <img title="scalytics-logo" alt="scalytics-logo" src="https://scalytics.ai/wp-content/uploads/elementor/thumbs/scalytics-logo-ofcd8j56av6j9xho3oof7il5j59t5z9puql15da3pw.png">
-                                    <!--<img src="assets/images/logo/logo-1-b.png" class="" alt="Boomerang">-->
+                                <a class="navbar-brand" href="index.html" style="margin-right: 10px">
+                                    <!--<img title="scalytics-logo" alt="scalytics-logo" src="https://scalytics.ai/wp-content/uploads/elementor/thumbs/scalytics-logo-ofcd8j56av6j9xho3oof7il5j59t5z9puql15da3pw.png">
+
+                                    <img src="assets/images/logo/logo-1-b.png" class="" alt="Boomerang">-->
+                                    <img title="scalytics-logo" alt="scalytics-logo" src="./assets/images/rheem/logo.png" style="height: 70px">
                                 </a>
+                                <a href="index.html" class="logo-font" style="color: #06733c; !important; font-size: 36px !important"> Scalytics</a>
 
                                 <div class="d-inline-block">
                                     <!-- Navbar toggler  -->
@@ -761,9 +776,9 @@
                     <!--Use case!!!, sliders!!!-->
                     <section class="slice-lg sct-color-1" id="case_of_usage" style="padding-bottom: 24px !important;">
                         <div class="container-fluid" style="padding-top: 48px !important;">
-                            <div class="swiper-container-coverflow" data-swiper-initial-slide="2" data-swiper-items="5" data-swiper-space-between="0" data-swiper-sm-items="2" data-swiper-sm-space-between="0" data-swiper-xs-items="1" data-swiper-xs-space-between="0">
+                            <div class="swiper-container-coverflow" data-swiper-initial-slide="1" data-swiper-items="5" data-swiper-space-between="0" data-swiper-sm-items="1" data-swiper-sm-space-between="0" data-swiper-xs-items="1" data-swiper-xs-space-between="0">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide animate-on-scroll fadeIn" data-wow-delay="0.4s">
+                                    <!--<div class="swiper-slide animate-on-scroll fadeIn" data-wow-delay="0.4s">
                                         <div class="block block--style-5 mb-0">
                                             <div class="block-image">
                                                 <a href="assets/images/prv/other/oportunistic-mullti.png" data-fancybox="apps">
@@ -771,7 +786,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
 
                                     <div class="swiper-slide animate-on-scroll fadeIn" data-wow-delay="0.2s">
                                         <div class="block block--style-5 mb-0">
@@ -803,7 +818,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="swiper-slide animate-on-scroll fadeIn" data-wow-delay="0.4s">
+                                    <!--<div class="swiper-slide animate-on-scroll fadeIn" data-wow-delay="0.4s">
                                         <div class="block block--style-5 mb-0">
                                             <div class="block-image">
                                                 <a href="assets/images/prv/other/platform-independence.png" data-fancybox="apps">
@@ -811,7 +826,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
