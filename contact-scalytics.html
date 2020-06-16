@@ -49,7 +49,8 @@
 
     <link href="assets/vendor/fontawesome/css/all.css" rel="stylesheet" type="text/css">
     <!-- Recaptcha -->
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!--<script src="https://www.google.com/recaptcha/api.js"></script>-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdhOaUZAAAAAPCvWpHB7pKBbVMbDckNWfUPcO_x"></script>
 
 </head>
 
@@ -249,7 +250,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Contact form -->
-                                    <form id="form_contact" class="form-default" role="form">
+                                    <form id="form_contact" class="form-default"  role="form">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group has-feedback">
@@ -300,10 +301,20 @@
                                         </div>
 
                                         <div class="">
-                                            <div class="g-recaptcha mt-3" data-sitekey="6Lfs5ScUAAAAANAJwGrdfvWLFRRiVbKRE2vfoaFj"></div>
-
+                                            <!--<div class="g-recaptcha"
+                                                 data-sitekey="6LdhOaUZAAAAAPCvWpHB7pKBbVMbDckNWfUPcO_x"
+                                            ></div>-->
                                             <button type="reset" class="btn-reset d-none"></button>
-                                            <a id="okButton" class="btn btn-styled btn-base-1 mt-4" onclick="sendData()" style="color: white">Send message</a>
+                                            <!--<button type="submit"
+                                                    class="g-recaptcha btn btn-styled btn-base-1 mt-4"
+                                                    data-sitekey="6LdhOaUZAAAAAPCvWpHB7pKBbVMbDckNWfUPcO_x"
+                                                    data-callback='onSubmit'
+                                                    data-action='submit'
+                                                    style="color: white">Send message</button>-->
+                                            <a class="btn btn-styled btn-base-1 mt-4"
+                                               style="color: white"
+                                                onclick="sendData()"
+                                            >Send message</a>
                                         </div>
                                     </form>
                                 </div>
@@ -364,86 +375,67 @@
 <a href="#" class="back-to-top btn-back-to-top"></a>
 
 <script>
+
     function sendData() {
+        //e.preventDefault();
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LdhOaUZAAAAAPCvWpHB7pKBbVMbDckNWfUPcO_x', {action: 'submit'}).then(function(token) {
 
-        var name = document.getElementById("name");
-        var email = document.getElementById("email");
-        var message = document.getElementById("message");
+                console.log("token", token);
 
-        var http = new XMLHttpRequest();
+                var name = document.getElementById("name");
+                var email = document.getElementById("email");
+                var message = document.getElementById("message");
 
-        let obj = {
-            "name": name.value,
-            "email": email.value,
-            "message": message.value
-        }
+                var http = new XMLHttpRequest();
 
-        let body = {
-            "body" : obj
-        }
+                let obj = {
+                    "name": name.value,
+                    "email": email.value,
+                    "message": message.value
+                }
 
-        if(email.checkValidity() && name.checkValidity() && message.checkValidity()){
-            console.log("send email");
+                let body = {
+                    "body": obj
+                }
 
-            var url = 'https://hooks.zapier.com/hooks/catch/7797218/osxqlx6';
-            http.open('POST', url, true);
+                if (email.checkValidity() && name.checkValidity() && message.checkValidity()) {
+                    console.log("send email");
 
-            // Define what happens on successful data submission
-            http.addEventListener( 'load', function( event ) {
-                alert( 'Message successfully sent' );
-                window.location.replace("./index.html");
-            } );
+                    if(true) {
 
-            // Define what happens in case of error
-            http.addEventListener(' error', function( event ) {
-                alert( 'Oops! Something went wrong. Please contact us sending an email to hello@scalytics.io' );
-                window.location.replace("./contact-scalytics.html");
-            } );
 
-            http.send(JSON.stringify(body));
+                        var url = 'https://hooks.zapier.com/hooks/catch/7797218/osxqlx6';
+                        http.open('POST', url, true);
 
-        } else if (!email.checkValidity()) {
-            console.log("fill a valid email");
-            alert("Fill a valid email");
-        } else if(!name.checkValidity()){
-            console.log("fill a valid name");
-            alert("Fill with your name");
-        } else if(!message.checkValidity()){
-            console.log("fill a valid message");
-            alert("Fill some message");
-        }
-        /*console.log("in", email.checkValidity());
+                        // Define what happens on successful data submission
+                        http.addEventListener('load', function (event) {
+                            alert('Message successfully sent');
+                            window.location.replace("./index.html");
+                        });
 
-        console.log(email.value);
-        email.addEventListener('keyup', function (event) {
-            isValidEmail = email.checkValidity();
+                        // Define what happens in case of error
+                        http.addEventListener(' error', function (event) {
+                            alert('Oops! Something went wrong. Please contact us sending an email to hello@scalytics.io');
+                            window.location.replace("./contact-scalytics.html");
+                        });
 
-            console.log("in", isValidEmail);
+                        http.send(JSON.stringify(body));
+                    }
 
-            if ( isValidEmail ) {
-                okButton.disabled = false;
-            } else {
-                okButton.disabled = true;
-            }
-        });*/
+                } else if (!email.checkValidity()) {
+                    console.log("fill a valid email");
+                    alert("Fill a valid email");
+                } else if (!name.checkValidity()) {
+                    console.log("fill a valid name");
+                    alert("Fill with your name");
+                } else if (!message.checkValidity()) {
+                    console.log("fill a valid message");
+                    alert("Fill some message");
+                }
+            });
+        });
 
-/*
-        var url = 'https://hooks.zapier.com/hooks/catch/7797218/osxqlx6';
-        http.open('POST', url, true);
-
-        // Define what happens on successful data submission
-        http.addEventListener( 'load', function( event ) {
-            alert( 'Message successfully sent' );
-            window.location.replace("./index.html");
-        } );
-
-        // Define what happens in case of error
-        http.addEventListener(' error', function( event ) {
-            alert( 'Oops! Something went wrong. Please contact us using hello@scalytics.io' );
-        } );
-
-        http.send(JSON.stringify(body));
-*/
     }
 </script>
 
