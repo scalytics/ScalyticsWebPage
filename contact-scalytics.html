@@ -311,9 +311,11 @@
                                                     data-callback='onSubmit'
                                                     data-action='submit'
                                                     style="color: white">Send message</button>-->
-                                            <a class="btn btn-styled btn-base-1 mt-4"
-                                               style="color: white"
+                                            <a  id="sendbutton"
+                                                class="btn btn-styled btn-base-1 mt-4"
+                                                style="color: white"
                                                 onclick="sendData()"
+                                                disabled="false"
                                             >Send message</a>
                                         </div>
                                     </form>
@@ -381,7 +383,7 @@
         grecaptcha.ready(function() {
             grecaptcha.execute('6LdhOaUZAAAAAPCvWpHB7pKBbVMbDckNWfUPcO_x', {action: 'submit'}).then(function(token) {
 
-                console.log("token", token);
+                var sendbutton = document.getElementById("sendbutton");
 
                 var name = document.getElementById("name");
                 var email = document.getElementById("email");
@@ -399,12 +401,34 @@
                     "body": obj
                 }
 
-                if (email.checkValidity() && name.checkValidity() && message.checkValidity()) {
-                    console.log("send email");
+                if (!sendbutton.disabled && email.checkValidity() && name.checkValidity() && message.checkValidity()) {
+
+                    sendbutton.disabled = true;
+                    sendbutton.innerHTML = "Sending...";
+                    sendbutton.setAttribute("class","btn btn-styled btn-base-3 mt-4");
+
+                    /*
+                        var trs = "6LdhOaUZAAAAABqMoPwOlvgh24iAvCk9-TmhfynY";
+                        var obj2 = {
+                            "secret": trs,
+                            "response": token
+                        }
+
+                        var http_g = new XMLHttpRequest();
+                        var google_url = "https://www.google.com/recaptcha/api/siteverify";
+                        http_g.open('POST', google_url, true);
+                        http_g.setRequestHeader("Access-Control-Allow-Origin", "<origin> | *")
+                        http_g.send(JSON.stringify(obj2));
+                        http_g.onreadystatechange = function() {
+                            if (http_g.readyState == 4)
+                                if (http_g.status == 200) {
+                                    let json_data = http_g.responseText;
+                                    console.log("json_data", json_data);
+                                }
+                        };
+                    */
 
                     if(true) {
-
-
                         var url = 'https://hooks.zapier.com/hooks/catch/7797218/osxqlx6';
                         http.open('POST', url, true);
 
@@ -422,7 +446,6 @@
 
                         http.send(JSON.stringify(body));
                     }
-
                 } else if (!email.checkValidity()) {
                     console.log("fill a valid email");
                     alert("Fill a valid email");
