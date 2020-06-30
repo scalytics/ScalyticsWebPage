@@ -429,11 +429,19 @@
                     */
 
                     if(true) {
-                        var url = 'https://hooks.zapier.com/hooks/catch/7797218/osxqlx6';
+                        var url = 'https://wh.automate.io/webhook/5efb99c14455214e57120a26';
                         http.open('POST', url, true);
+                        http.setRequestHeader("Content-Type", "application/json");
 
                         // Define what happens on successful data submission
                         http.addEventListener('load', function (event) {
+
+                            var url_r = 'https://wh.automate.io/webhook/5efb9aeaa4cbab78b8677198';
+                            var http_r = new XMLHttpRequest();
+                            http_r.open('POST', url_r, true);
+                            http_r.setRequestHeader("Content-Type", "application/json");
+                            http_r.send(JSON.stringify(body));
+
                             alert('Message successfully sent');
                             window.location.replace("./index.html");
                         });
